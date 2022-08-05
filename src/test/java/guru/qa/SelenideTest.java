@@ -18,19 +18,11 @@ public class SelenideTest {
     }
 
     @Test
-    void gitHubTest(){
-        open ("https://github.com/selenide/selenide");
+    void gitHubTest() {
+        open("https://github.com/selenide/selenide");
         $("#wiki-tab").click();
         $(".js-wiki-more-pages-link").click();
         $(byText("SoftAssertions")).click();
         $("#wiki-content").shouldHave(text("Using JUnit4 just describe rule inside test class:"));
     }
-
-
-
-
-
-
-
-
 }
